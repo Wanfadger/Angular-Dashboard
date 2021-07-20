@@ -1,0 +1,26 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="profile image" srcset="profile image">
+        <div>Wanfadger Galiwango Fahad</div>
+        <div>galiwango.fahad@gmail.com</div>
+        <div>Developer</div>
+    </div>
+    
+    <mat-divider></mat-divider>
+    
+    <div  class="pages" color='primary' >Pages</div>
+    
+    <mat-divider></mat-divider>
+   
+    <mat-nav-list>
+        <a mat-list-item [routerLink]="['dashboard']" routerLinkActive="router-link-active"> 
+            <mat-icon aria-hidden="false" aria-label="{2:label} icon">article</mat-icon>
+            Dashboard
+        </a>
+        <a mat-list-item [routerLink]="['dashboard' , page]" routerLinkActive="router-link-active"   *ngFor="let page of pages"> 
+            <mat-icon aria-hidden="false" aria-label="{2:label} icon">article</mat-icon>
+            Page {{ page }} </a>
+     </mat-nav-list>
+</mat-nav-list>
+
+

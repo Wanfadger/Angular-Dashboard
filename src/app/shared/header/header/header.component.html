@@ -1,0 +1,64 @@
+
+<mat-toolbar color="primary" class="mat-elevation-z6">
+ 
+    <button mat-icon-button class="example-icon" 
+    (click)="onHideSideNav()"
+    aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    <span>
+        Dashboard
+    </span>
+
+      <div fxFlex>
+        <ul  role="list" fxLayout="row" fxLayoutAlign="end" fxLayoutGap="20px">
+            <mat-list-item  
+            [matMenuTriggerFor]="settingsMenu"
+            matTooltip="settings" matTooltipPosition="below" > 
+                <mat-icon  matListIcon>settings</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item  
+            [matMenuTriggerFor] = "helpMenu"
+            matTooltip="Ask question" matTooltipPosition="below" > 
+                <mat-icon  matListIcon>help</mat-icon>
+            </mat-list-item>
+        </ul>
+      </div>
+</mat-toolbar>
+
+<mat-menu #settingsMenu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>person</mat-icon>
+      <span>Profile</span>
+    </button>
+     <mat-divider></mat-divider>
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>LogOut</span>
+    </button>
+  </mat-menu>
+
+
+  <mat-menu #helpMenu="matMenu">
+
+    <button mat-menu-item>
+      <mat-icon>question_answer</mat-icon>
+      <span>Check our Q/A</span>
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>email</mat-icon>
+      <span>Email</span>
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>chat</mat-icon>
+      <span>Chat</span>
+    </button>
+
+    <button mat-menu-item>
+      <mat-icon>call</mat-icon>
+      <span>Make us a call</span>
+    </button>
+  </mat-menu>

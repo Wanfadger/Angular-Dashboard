@@ -1,0 +1,17 @@
+
+  <app-header (hideSideNavEvent) = "toggleSideNav()" ></app-header>
+
+
+
+<mat-sidenav-container >
+  <mat-sidenav #sidenav class="mat-elevation-z4" mode="side" [opened]="isSideNavOpen">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+ 
+  <mat-sidenav-content>
+    <app-content></app-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+  <app-footer></app-footer>
