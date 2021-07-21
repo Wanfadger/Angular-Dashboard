@@ -1,3 +1,4 @@
+import { DashboardTableComponent } from './content/dashboard-table/dashboard-table.component';
 import { ContentComponent } from './content/content/content.component';
 import { Page2Component } from './content/page2/page2.component';
 import { Page1Component } from './content/page1/page1.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   {path:"dashboard" , component:ContentComponent , children:[
     {path:"" , component:DashboardComponent},
     {path:"page1" , component:Page1Component},
-    {path:"page2" , component:Page2Component}
+    {path:"page2" , component:Page2Component},
+    {path:"table" , component:DashboardTableComponent}
     
   ]}
 ];

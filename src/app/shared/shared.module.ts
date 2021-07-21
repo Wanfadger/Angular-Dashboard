@@ -1,3 +1,4 @@
+import { DashboardTableComponent } from './../content/dashboard-table/dashboard-table.component';
 
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../material/material.module';
@@ -26,7 +27,8 @@ const declarations = [
     ContentComponent,
     Page1Component,
     Page2Component,
-    DashboardComponent
+    DashboardComponent,
+    DashboardTableComponent
 ]
 
 

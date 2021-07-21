@@ -24,6 +24,7 @@
     "angular-highcharts": "^12.0.0",
     "chokidar": "^3.5.2",
     "highcharts": "^9.1.2",
+    "mat-table-exporter": "^10.2.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
