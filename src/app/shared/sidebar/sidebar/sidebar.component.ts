@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  pages = ["page1" , "page2" , "table" ]
+  pages = ["page1" , "page2" , "table" , "excel-uploading" ]
   constructor() { }
 
   ngOnInit(): void {

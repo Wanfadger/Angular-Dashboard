@@ -1,3 +1,4 @@
+import { ExcelUploadComponent } from './../content/uploading/excel-upload/excel-upload.component';
 import { DashboardTableComponent } from './../content/dashboard-table/dashboard-table.component';
 
 import { RouterModule } from '@angular/router';
@@ -18,6 +19,8 @@ import { Page1Component } from './../content/page1/page1.component';
 import { ContentComponent } from './../content/content/content.component';
 import { HeaderComponent } from './header/header/header.component';
 import { Page2Component } from '../content/page2/page2.component';
+import { ExcelParserDirective } from './directive/excel-parser.directive';
+
 
 const declarations = [
     HeaderComponent,
@@ -28,7 +31,9 @@ const declarations = [
     Page1Component,
     Page2Component,
     DashboardComponent,
-    DashboardTableComponent
+    DashboardTableComponent,
+    ExcelUploadComponent,
+    ExcelParserDirective
 ]
 
 

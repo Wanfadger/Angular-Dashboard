@@ -1,3 +1,4 @@
+import { ExcelUploadComponent } from './content/uploading/excel-upload/excel-upload.component';
 import { DashboardTableComponent } from './content/dashboard-table/dashboard-table.component';
 import { ContentComponent } from './content/content/content.component';
 import { Page2Component } from './content/page2/page2.component';
@@ -12,7 +13,9 @@ const routes: Routes = [
     {path:"" , component:DashboardComponent},
     {path:"page1" , component:Page1Component},
     {path:"page2" , component:Page2Component},
-    {path:"table" , component:DashboardTableComponent}
+    {path:"table" , component:DashboardTableComponent},
+    {path:"excel-uploading" , component:ExcelUploadComponent},
+
     
   ]}
 ];
