@@ -40,7 +40,8 @@ const materialModules = [
     CdkTableModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableExporterModule
+    MatTableExporterModule,
+    
     
 ]
 

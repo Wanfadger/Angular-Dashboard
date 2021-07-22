@@ -3,18 +3,19 @@
   <div fxLayout="row" >
     <div fxFlex="50" >
       <button type="button" mat-raised-button
+      hidden
        matTooltip="select excel file to upload" matTooltipPosition="below"
-      (click)="fileInput.click()" style="margin-right: 10px;">
+      (click)="uploadField.click()" style="margin-right: 10px;">
         <mat-icon aria-hidden="false" aria-label="{2:label} icon">file_upload</mat-icon>
         Choose File</button>
 
-      <input hidden appExcelParser placeholder="Choose a file" #fileInput type="file" (excelEvent)="importExcelData($event)">
-      <button type="button" 
+      <input hidden #uploadField appExcelParser placeholder="Choose a file"  type="file" (excelEvent)="importExcelData($event)">
+      <button type="button"
       matTooltip="clear data" matTooltipPosition="below"
       mat-raised-button (click)="clearTable()"
       disabled="{{ isDatasourceEmpty ? true : false}}"
       >
-        <mat-icon aria-hidden="false" aria-label="{2:label} icon"  >clear_all</mat-icon>
+        <mat-icon aria-hidden="false" aria-label="{2:label} icon">clear_all</mat-icon>
         clear table</button>
     </div>
   </div>
@@ -45,13 +46,13 @@
       <!-- Symbol Column -->
       <ng-container matColumnDef="startTime">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> START TIME </th>
-        <td mat-cell *matCellDef="let lesson"> {{lesson.startTime}} </td>
+        <td mat-cell *matCellDef="let lesson"> {{lesson.endTime(lesson.startTime)}} </td>
       </ng-container>
 
        <!-- Symbol Column -->
        <ng-container matColumnDef="endTime">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> END TIME </th>
-        <td mat-cell *matCellDef="let lesson"> {{convertToDate(lesson.endTime)}} </td>
+        <td mat-cell *matCellDef="let lesson"> {{convertToTime(lesson.endTime)}} </td>
       </ng-container>
 
        <!-- Symbol Column -->
@@ -74,11 +75,11 @@
         </ng-container>
 
 
-      <!--       
+      <!--
                       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> -->
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-row  class="data-row" *matRowDef="let row; columns: displayedColumns;"></tr>
 
     </table>
 
